@@ -26,10 +26,8 @@ class LED:
         
         if FAN_MODE:
             self.draw.text((77,16), 'FAN:ON', font = self.font_12, fill = 0)
-            self.FAN_ON()
         else:
             self.draw.text((77,16), 'FAN:OFF', font = self.font_12, fill = 0)
-            self.FAN_OFF()
         
         self.show.ShowImage(self.show.getbuffer(self.image1))
 
