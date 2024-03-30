@@ -32,8 +32,8 @@ class POE_HAT_B:
 
         # get info
         temp = self.GET_Temp()
-        if temp != self.temp:
-            self.temp = temp
+        if int(temp) != self.temp:
+            self.temp = int(temp)
             changed = True
 
         # set fan
@@ -55,8 +55,8 @@ class POE_HAT_B:
         
         # led display
         if changed:
-            self.led.display(self.hostname,temp,self.FAN_MODE)
-            print(f"Debug: display H:{self.hostname} Temp:{temp} FAN:{'ON' if self.FAN_MODE else 'OFF'}")
+            self.led.display(self.hostname,int(temp),self.FAN_MODE)
+            print(f"Debug: display H:{self.hostname} Temp:{int(temp)} FAN:{'ON' if self.FAN_MODE else 'OFF'}")
 
     # to support old code
     def FAN_OFF(self):
