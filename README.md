@@ -7,6 +7,7 @@ sudo apt-get install wiringpi
 sudo apt-get install python3 python3-pip
 sudo apt-get install python3-smbus
 sudo pip3 install RPi.GPIO
+pip3 install Pillow
 ```
 
 try run `python3 main.py`
