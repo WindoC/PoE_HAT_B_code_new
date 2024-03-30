@@ -15,9 +15,14 @@ if PermissionError: [Errno 13] Permission denied
 
 `sudo chmod a+rw /dev/i2c-*`
 
-## install
+## install (need systemd)
 
 ```bash
+# expect you are in /home/pi now
+git clone https://github.com/WindoC/PoE_HAT_B_code_new
+cd PoE_HAT_B_code_new
+
+# command will set new service in systemd (copy /etc/systemd/system/poe-hat.service)
 sudo bash install.sh
 
 # check running status
