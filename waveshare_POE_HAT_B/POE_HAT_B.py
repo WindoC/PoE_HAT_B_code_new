@@ -10,8 +10,8 @@ class POE_HAT_B:
         self.fan = FAN()
         self.led = LED()
         self.hostname = socket.gethostname()
-        self.fan.FAN_ON()
-        self.FAN_MODE = True
+        # self.fan.FAN_ON()
+        self.FAN_MODE = None
         self.temp = None
         
     def GET_IP(self):
@@ -56,6 +56,7 @@ class POE_HAT_B:
         # led display
         if changed:
             self.led.display(self.hostname,temp,self.FAN_MODE)
+            print(f"Debug: display H:{self.hostname} Temp:{temp} FAN:{'ON' if self.FAN_MODE else 'OFF'}")
 
     # to support old code
     def FAN_OFF(self):
