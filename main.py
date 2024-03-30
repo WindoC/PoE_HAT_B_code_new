@@ -13,7 +13,7 @@ def main():
     try:  
         while(1):
             POE.POE_HAT_Display(50.0,10.0)
-            time.sleep(1)
+            time.sleep(10)
             
     except KeyboardInterrupt:    
         print("ctrl + c:")

@@ -55,7 +55,7 @@ class POE_HAT_B:
         
         # led display
         if changed:
-            self.led.display(self.hostname,int(temp),self.FAN_MODE)
+            self.led.display(self.hostname,temp,self.FAN_MODE)
             print(f"Debug: display H:{self.hostname} Temp:{int(temp)} FAN:{'ON' if self.FAN_MODE else 'OFF'}")
 
     # to support old code
