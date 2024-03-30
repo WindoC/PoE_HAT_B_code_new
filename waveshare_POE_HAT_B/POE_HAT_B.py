@@ -12,6 +12,7 @@ class POE_HAT_B:
         self.hostname = socket.gethostname()
         self.fan.FAN_ON()
         self.FAN_MODE = True
+        self.temp = None
         
     def GET_IP(self):
         s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
