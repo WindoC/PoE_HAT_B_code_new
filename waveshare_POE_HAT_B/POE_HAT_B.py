@@ -1,13 +1,14 @@
 import socket
-import LED
-import FAN
+
+from .LED import LED
+from .FAN import FAN
 import os
 
 class POE_HAT_B:
 
     def __init__(self):
-        self.fan = FAN.FAN()
-        self.led = LED.LED()
+        self.fan = FAN()
+        self.led = LED()
         self.hostname = socket.gethostname()
         self.fan.FAN_ON()
         self.FAN_MODE = True

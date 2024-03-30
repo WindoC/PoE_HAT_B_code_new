@@ -2,13 +2,13 @@ import time
 
 import logging
 
-from waveshare_POE_HAT_B import POE_HAT_B
+from waveshare_POE_HAT_B.POE_HAT_B import POE_HAT_B
 
 logging.basicConfig(level=logging.INFO)
 
 def main():
     
-    POE = POE_HAT_B.POE_HAT_B()
+    POE = POE_HAT_B()
 
     try:  
         while(1):
