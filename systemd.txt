@@ -1,0 +1,17 @@
+
+[Unit]
+Description=PoE HAT B Code
+After=sysinit.target
+StartLimitIntervalSec=0
+
+[Service]
+ExecStart=python3 /home/pi/scripts/PoE_HAT_B_code_new/main.py
+StandardInput=null
+StandardOutput=null
+StandardError=null
+Restart=always
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
