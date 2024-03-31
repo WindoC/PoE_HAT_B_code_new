@@ -13,7 +13,7 @@ class POE_HAT_B:
         self.temp = None
         # default turn fan on
         self.FAN_MODE = True
-        self.fan.FAN_ON()
+        self.FAN_ON()
         
     def GET_Temp(self):
         with open('/sys/class/thermal/thermal_zone0/temp', 'rt') as f:
