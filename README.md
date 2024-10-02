@@ -8,7 +8,7 @@ docker run -d \
  --device /dev/i2c-1 \
  -v /sys/class/thermal/thermal_zone0/temp:/sys/class/thermal/thermal_zone0/temp \
  --restart=on-failure \
- poe_hat_b_new
+ ghcr.io/WindoC/PoE_HAT_B_code_new/poe_hat_b
 ```
 
 remark:
@@ -29,7 +29,7 @@ docker run -d \
  --device /dev/i2c-1 \
  -v /sys/class/thermal/thermal_zone0/temp:/sys/class/thermal/thermal_zone0/temp \
  --restart=on-failure \
- poe_hat_b_new
+ ghcr.io/WindoC/PoE_HAT_B_code_new/poe_hat_b
 ```
 
 remark:

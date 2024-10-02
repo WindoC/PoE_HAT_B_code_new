@@ -16,8 +16,8 @@ jobs:
         name: Prepare
         id: prepare
         run: |
-          # DOCKER_IMAGE_dockerhub=windoac/poe-hat
-          DOCKER_IMAGE_github=ghcr.io/${{ github.repository }}
+          # DOCKER_IMAGE_dockerhub=windoac/poe_hat_b
+          DOCKER_IMAGE_github=ghcr.io/WindoC/PoE_HAT_B_code_new/poe_hat_b
           DOCKER_PLATFORMS=linux/arm64/v8
           VERSION=edge
 
