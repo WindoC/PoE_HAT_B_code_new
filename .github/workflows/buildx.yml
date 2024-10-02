@@ -9,6 +9,9 @@ jobs:
   buildx:
     runs-on: ubuntu-latest
     steps:
+      - name: downcase REPO
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
       -
         name: Checkout
         uses: actions/checkout@v3
@@ -17,7 +20,7 @@ jobs:
         id: prepare
         run: |
           # DOCKER_IMAGE_dockerhub=windoac/poe_hat_b
-          DOCKER_IMAGE_github=ghcr.io/WindoC/PoE_HAT_B_code_new/poe_hat_b
+          DOCKER_IMAGE_github=ghcr.io/${REPO}
           DOCKER_PLATFORMS=linux/arm64/v8
           VERSION=edge
 
