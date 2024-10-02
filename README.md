@@ -4,11 +4,12 @@
 
 ```bash
 docker run -d \
+ --name poe_hat \
  --hostname $(hostname) \
  --device /dev/i2c-1 \
  -v /sys/class/thermal/thermal_zone0/temp:/sys/class/thermal/thermal_zone0/temp \
  --restart=on-failure \
- ghcr.io/WindoC/PoE_HAT_B_code_new/poe_hat_b
+ ghcr.io/windoc/poe_hat_b_code_new
 ```
 
 remark:
@@ -24,12 +25,13 @@ remark:
 
 ```bash
 docker run -d \
+ --name poe_hat \
  --hostname $(hostname) \
  -e POE_HAT_TEMPERATURE=50.0 -e POE_HAT_DELTA=10.0 \
  --device /dev/i2c-1 \
  -v /sys/class/thermal/thermal_zone0/temp:/sys/class/thermal/thermal_zone0/temp \
  --restart=on-failure \
- ghcr.io/WindoC/PoE_HAT_B_code_new/poe_hat_b
+ ghcr.io/windoc/poe_hat_b_code_new
 ```
 
 remark:
@@ -39,7 +41,7 @@ remark:
 
 ```bash
 # build
-docker build -t poe_hat_b .
+docker build -t poe_hat_b -f docker/Dockerfile .
 
 # try command
 docker run -it --rm --device /dev/i2c-1 -v /sys/class/thermal/thermal_zone0/temp:/sys/class/thermal/thermal_zone0/temp poe_hat_b python3 main.py

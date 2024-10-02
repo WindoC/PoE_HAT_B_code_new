@@ -10,8 +10,8 @@ RUN apt-get update \
 
 WORKDIR /usr/src/app
 
-COPY ./*.py /usr/src/app
-COPY waveshare_POE_HAT_B /usr/src/app
+COPY *.py /usr/src/app
+COPY waveshare_POE_HAT_B /usr/src/app/waveshare_POE_HAT_B
 COPY docker/entrypoint.sh /
 COPY docker/requirements.txt /
 
